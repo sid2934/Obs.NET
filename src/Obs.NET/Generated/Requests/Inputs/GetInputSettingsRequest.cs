@@ -50,12 +50,12 @@ public class GetInputSettingsResponse : IObsWsRequestData
     /// Object of settings for the input
     /// </summary>
     [JsonPropertyName("inputSettings")]
-    public System.Text.Json.JsonElement InputSettings { get; set; }
-    
+    public required System.Text.Json.JsonElement InputSettings { get; set; }
+
     /// <summary>
     /// The kind of the input
     /// </summary>
     [JsonPropertyName("inputKind")]
-    public string InputKind { get; set; } = string.Empty;
-    
+    public required string InputKind { get; set; }
+
 }

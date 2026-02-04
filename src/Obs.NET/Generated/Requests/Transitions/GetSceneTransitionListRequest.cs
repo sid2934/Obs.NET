@@ -33,24 +33,24 @@ public class GetSceneTransitionListResponse : IObsWsRequestData
     /// Name of the current scene transition. Can be null
     /// </summary>
     [JsonPropertyName("currentSceneTransitionName")]
-    public string CurrentSceneTransitionName { get; set; } = string.Empty;
-    
+    public required string CurrentSceneTransitionName { get; set; }
+
     /// <summary>
     /// UUID of the current scene transition. Can be null
     /// </summary>
     [JsonPropertyName("currentSceneTransitionUuid")]
-    public string CurrentSceneTransitionUuid { get; set; } = string.Empty;
-    
+    public required string CurrentSceneTransitionUuid { get; set; }
+
     /// <summary>
     /// Kind of the current scene transition. Can be null
     /// </summary>
     [JsonPropertyName("currentSceneTransitionKind")]
-    public string CurrentSceneTransitionKind { get; set; } = string.Empty;
-    
+    public required string CurrentSceneTransitionKind { get; set; }
+
     /// <summary>
     /// Array of transitions
     /// </summary>
     [JsonPropertyName("transitions")]
-    public IEnumerable<Obs.NET.Models.ObsTransition> Transitions { get; set; }
-    
+    public required IEnumerable<Obs.NET.Models.ObsTransition> Transitions { get; set; }
+
 }

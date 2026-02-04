@@ -56,6 +56,6 @@ public class GetInputPropertiesListPropertyItemsResponse : IObsWsRequestData
     /// Array of items in the list property
     /// </summary>
     [JsonPropertyName("propertyItems")]
-    public IEnumerable<System.Text.Json.JsonElement> PropertyItems { get; set; }
-    
+    public required IEnumerable<System.Text.Json.JsonElement> PropertyItems { get; set; }
+
 }

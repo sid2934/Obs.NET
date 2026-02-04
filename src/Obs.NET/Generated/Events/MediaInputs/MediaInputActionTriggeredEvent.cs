@@ -28,19 +28,19 @@ public class MediaInputActionTriggeredEvent : IObsWsEventData
     /// Name of the input
     /// </summary>
     [JsonPropertyName("inputName")]
-    public string InputName { get; set; } = string.Empty;
-    
+    public required string InputName { get; set; }
+
     /// <summary>
     /// UUID of the input
     /// </summary>
     [JsonPropertyName("inputUuid")]
-    public string InputUuid { get; set; } = string.Empty;
-    
+    public required string InputUuid { get; set; }
+
     /// <summary>
     /// Action performed on the input. See `ObsMediaInputAction` enum
     /// </summary>
     [JsonPropertyName("mediaAction")]
-    public string MediaAction { get; set; } = string.Empty;
-    
+    public required string MediaAction { get; set; }
+
 }
 

@@ -28,19 +28,19 @@ public class InputMuteStateChangedEvent : IObsWsEventData
     /// Name of the input
     /// </summary>
     [JsonPropertyName("inputName")]
-    public string InputName { get; set; } = string.Empty;
-    
+    public required string InputName { get; set; }
+
     /// <summary>
     /// UUID of the input
     /// </summary>
     [JsonPropertyName("inputUuid")]
-    public string InputUuid { get; set; } = string.Empty;
-    
+    public required string InputUuid { get; set; }
+
     /// <summary>
     /// Whether the input is muted
     /// </summary>
     [JsonPropertyName("inputMuted")]
-    public bool InputMuted { get; set; }
-    
+    public required bool InputMuted { get; set; }
+
 }
 

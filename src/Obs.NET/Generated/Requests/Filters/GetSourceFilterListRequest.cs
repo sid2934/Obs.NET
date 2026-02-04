@@ -48,6 +48,6 @@ public class GetSourceFilterListResponse : IObsWsRequestData
     /// Array of filters
     /// </summary>
     [JsonPropertyName("filters")]
-    public IEnumerable<Obs.NET.Models.ObsFilter> Filters { get; set; }
-    
+    public required IEnumerable<Obs.NET.Models.ObsFilter> Filters { get; set; }
+
 }

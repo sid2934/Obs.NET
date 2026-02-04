@@ -54,24 +54,24 @@ public class GetSourceFilterResponse : IObsWsRequestData
     /// Whether the filter is enabled
     /// </summary>
     [JsonPropertyName("filterEnabled")]
-    public bool FilterEnabled { get; set; }
-    
+    public required bool FilterEnabled { get; set; }
+
     /// <summary>
     /// Index of the filter in the list, beginning at 0
     /// </summary>
     [JsonPropertyName("filterIndex")]
-    public double FilterIndex { get; set; }
-    
+    public required double FilterIndex { get; set; }
+
     /// <summary>
     /// The kind of filter
     /// </summary>
     [JsonPropertyName("filterKind")]
-    public string FilterKind { get; set; } = string.Empty;
-    
+    public required string FilterKind { get; set; }
+
     /// <summary>
     /// Settings object associated with the filter
     /// </summary>
     [JsonPropertyName("filterSettings")]
-    public System.Text.Json.JsonElement FilterSettings { get; set; }
-    
+    public required System.Text.Json.JsonElement FilterSettings { get; set; }
+
 }

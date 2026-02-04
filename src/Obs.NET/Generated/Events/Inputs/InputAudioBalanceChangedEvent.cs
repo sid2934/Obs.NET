@@ -28,19 +28,19 @@ public class InputAudioBalanceChangedEvent : IObsWsEventData
     /// Name of the input
     /// </summary>
     [JsonPropertyName("inputName")]
-    public string InputName { get; set; } = string.Empty;
-    
+    public required string InputName { get; set; }
+
     /// <summary>
     /// UUID of the input
     /// </summary>
     [JsonPropertyName("inputUuid")]
-    public string InputUuid { get; set; } = string.Empty;
-    
+    public required string InputUuid { get; set; }
+
     /// <summary>
     /// New audio balance value of the input
     /// </summary>
     [JsonPropertyName("inputAudioBalance")]
-    public double InputAudioBalance { get; set; }
-    
+    public required double InputAudioBalance { get; set; }
+
 }
 

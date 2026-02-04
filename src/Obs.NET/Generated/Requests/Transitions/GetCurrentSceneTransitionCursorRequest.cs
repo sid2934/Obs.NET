@@ -35,6 +35,6 @@ public class GetCurrentSceneTransitionCursorResponse : IObsWsRequestData
     /// Cursor position, between 0.0 and 1.0
     /// </summary>
     [JsonPropertyName("transitionCursor")]
-    public double TransitionCursor { get; set; }
-    
+    public required double TransitionCursor { get; set; }
+
 }

@@ -33,42 +33,42 @@ public class GetVersionResponse : IObsWsRequestData
     /// Current OBS Studio version
     /// </summary>
     [JsonPropertyName("obsVersion")]
-    public string ObsVersion { get; set; } = string.Empty;
-    
+    public required string ObsVersion { get; set; }
+
     /// <summary>
     /// Current obs-websocket version
     /// </summary>
     [JsonPropertyName("obsWebSocketVersion")]
-    public string ObsWebSocketVersion { get; set; } = string.Empty;
-    
+    public required string ObsWebSocketVersion { get; set; }
+
     /// <summary>
     /// Current latest obs-websocket RPC version
     /// </summary>
     [JsonPropertyName("rpcVersion")]
-    public double RpcVersion { get; set; }
-    
+    public required double RpcVersion { get; set; }
+
     /// <summary>
     /// Array of available RPC requests for the currently negotiated RPC version
     /// </summary>
     [JsonPropertyName("availableRequests")]
-    public IEnumerable<string> AvailableRequests { get; set; }
-    
+    public required IEnumerable<string> AvailableRequests { get; set; }
+
     /// <summary>
     /// Image formats available in `GetSourceScreenshot` and `SaveSourceScreenshot` requests.
     /// </summary>
     [JsonPropertyName("supportedImageFormats")]
-    public IEnumerable<string> SupportedImageFormats { get; set; }
-    
+    public required IEnumerable<string> SupportedImageFormats { get; set; }
+
     /// <summary>
     /// Name of the platform. Usually `windows`, `macos`, or `ubuntu` (linux flavor). Not guaranteed to be any of those
     /// </summary>
     [JsonPropertyName("platform")]
-    public string Platform { get; set; } = string.Empty;
-    
+    public required string Platform { get; set; }
+
     /// <summary>
     /// Description of the platform, like `Windows 10 (10.0)`
     /// </summary>
     [JsonPropertyName("platformDescription")]
-    public string PlatformDescription { get; set; } = string.Empty;
-    
+    public required string PlatformDescription { get; set; }
+
 }

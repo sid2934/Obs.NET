@@ -55,6 +55,6 @@ public class GetInputDeinterlaceFieldOrderResponse : IObsWsRequestData
     /// Deinterlace field order of the input
     /// </summary>
     [JsonPropertyName("inputDeinterlaceFieldOrder")]
-    public string InputDeinterlaceFieldOrder { get; set; } = string.Empty;
-    
+    public required string InputDeinterlaceFieldOrder { get; set; }
+
 }

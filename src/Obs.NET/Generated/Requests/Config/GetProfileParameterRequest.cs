@@ -46,12 +46,12 @@ public class GetProfileParameterResponse : IObsWsRequestData
     /// Value associated with the parameter. `null` if not set and no default
     /// </summary>
     [JsonPropertyName("parameterValue")]
-    public string ParameterValue { get; set; } = string.Empty;
-    
+    public required string ParameterValue { get; set; }
+
     /// <summary>
     /// Default value associated with the parameter. `null` if no default
     /// </summary>
     [JsonPropertyName("defaultParameterValue")]
-    public string DefaultParameterValue { get; set; } = string.Empty;
-    
+    public required string DefaultParameterValue { get; set; }
+
 }

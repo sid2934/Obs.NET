@@ -28,19 +28,19 @@ public class InputAudioTracksChangedEvent : IObsWsEventData
     /// Name of the input
     /// </summary>
     [JsonPropertyName("inputName")]
-    public string InputName { get; set; } = string.Empty;
-    
+    public required string InputName { get; set; }
+
     /// <summary>
     /// UUID of the input
     /// </summary>
     [JsonPropertyName("inputUuid")]
-    public string InputUuid { get; set; } = string.Empty;
-    
+    public required string InputUuid { get; set; }
+
     /// <summary>
     /// Object of audio tracks along with their associated enable states
     /// </summary>
     [JsonPropertyName("inputAudioTracks")]
-    public System.Text.Json.JsonElement InputAudioTracks { get; set; }
-    
+    public required System.Text.Json.JsonElement InputAudioTracks { get; set; }
+
 }
 

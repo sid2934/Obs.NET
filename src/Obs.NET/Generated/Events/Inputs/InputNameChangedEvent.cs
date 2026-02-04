@@ -28,19 +28,19 @@ public class InputNameChangedEvent : IObsWsEventData
     /// UUID of the input
     /// </summary>
     [JsonPropertyName("inputUuid")]
-    public string InputUuid { get; set; } = string.Empty;
-    
+    public required string InputUuid { get; set; }
+
     /// <summary>
     /// Old name of the input
     /// </summary>
     [JsonPropertyName("oldInputName")]
-    public string OldInputName { get; set; } = string.Empty;
-    
+    public required string OldInputName { get; set; }
+
     /// <summary>
     /// New name of the input
     /// </summary>
     [JsonPropertyName("inputName")]
-    public string InputName { get; set; } = string.Empty;
-    
+    public required string InputName { get; set; }
+
 }
 

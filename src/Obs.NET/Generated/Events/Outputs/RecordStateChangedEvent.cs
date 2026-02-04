@@ -28,19 +28,19 @@ public class RecordStateChangedEvent : IObsWsEventData
     /// Whether the output is active
     /// </summary>
     [JsonPropertyName("outputActive")]
-    public bool OutputActive { get; set; }
-    
+    public required bool OutputActive { get; set; }
+
     /// <summary>
     /// The specific state of the output
     /// </summary>
     [JsonPropertyName("outputState")]
-    public string OutputState { get; set; } = string.Empty;
-    
+    public required string OutputState { get; set; }
+
     /// <summary>
     /// File name for the saved recording, if record stopped. `null` otherwise
     /// </summary>
     [JsonPropertyName("outputPath")]
-    public string OutputPath { get; set; } = string.Empty;
-    
+    public required string OutputPath { get; set; }
+
 }
 

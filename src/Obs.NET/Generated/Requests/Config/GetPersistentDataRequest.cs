@@ -46,6 +46,6 @@ public class GetPersistentDataResponse : IObsWsRequestData
     /// Value associated with the slot. `null` if not set
     /// </summary>
     [JsonPropertyName("slotValue")]
-    public System.Text.Json.JsonElement SlotValue { get; set; }
-    
+    public required System.Text.Json.JsonElement SlotValue { get; set; }
+
 }

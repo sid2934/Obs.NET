@@ -28,25 +28,25 @@ public class InputVolumeChangedEvent : IObsWsEventData
     /// Name of the input
     /// </summary>
     [JsonPropertyName("inputName")]
-    public string InputName { get; set; } = string.Empty;
-    
+    public required string InputName { get; set; }
+
     /// <summary>
     /// UUID of the input
     /// </summary>
     [JsonPropertyName("inputUuid")]
-    public string InputUuid { get; set; } = string.Empty;
-    
+    public required string InputUuid { get; set; }
+
     /// <summary>
     /// New volume level multiplier
     /// </summary>
     [JsonPropertyName("inputVolumeMul")]
-    public double InputVolumeMul { get; set; }
-    
+    public required double InputVolumeMul { get; set; }
+
     /// <summary>
     /// New volume level in dB
     /// </summary>
     [JsonPropertyName("inputVolumeDb")]
-    public double InputVolumeDb { get; set; }
-    
+    public required double InputVolumeDb { get; set; }
+
 }
 

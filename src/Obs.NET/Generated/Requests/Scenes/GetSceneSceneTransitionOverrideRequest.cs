@@ -50,12 +50,12 @@ public class GetSceneSceneTransitionOverrideResponse : IObsWsRequestData
     /// Name of the overridden scene transition, else `null`
     /// </summary>
     [JsonPropertyName("transitionName")]
-    public string TransitionName { get; set; } = string.Empty;
-    
+    public required string TransitionName { get; set; }
+
     /// <summary>
     /// Duration of the overridden scene transition, else `null`
     /// </summary>
     [JsonPropertyName("transitionDuration")]
-    public double TransitionDuration { get; set; }
-    
+    public required double TransitionDuration { get; set; }
+
 }

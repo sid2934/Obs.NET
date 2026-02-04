@@ -48,12 +48,12 @@ public class GetInputVolumeResponse : IObsWsRequestData
     /// Volume setting in mul
     /// </summary>
     [JsonPropertyName("inputVolumeMul")]
-    public double InputVolumeMul { get; set; }
-    
+    public required double InputVolumeMul { get; set; }
+
     /// <summary>
     /// Volume setting in dB
     /// </summary>
     [JsonPropertyName("inputVolumeDb")]
-    public double InputVolumeDb { get; set; }
-    
+    public required double InputVolumeDb { get; set; }
+
 }

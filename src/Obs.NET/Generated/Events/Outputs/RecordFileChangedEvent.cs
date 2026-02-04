@@ -28,7 +28,7 @@ public class RecordFileChangedEvent : IObsWsEventData
     /// File name that the output has begun writing to
     /// </summary>
     [JsonPropertyName("newOutputPath")]
-    public string NewOutputPath { get; set; } = string.Empty;
-    
+    public required string NewOutputPath { get; set; }
+
 }
 

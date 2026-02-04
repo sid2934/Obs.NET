@@ -30,7 +30,7 @@ public class CurrentSceneCollectionChangedEvent : IObsWsEventData
     /// Name of the new scene collection
     /// </summary>
     [JsonPropertyName("sceneCollectionName")]
-    public string SceneCollectionName { get; set; } = string.Empty;
-    
+    public required string SceneCollectionName { get; set; }
+
 }
 

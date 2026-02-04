@@ -33,30 +33,30 @@ public class GetRecordStatusResponse : IObsWsRequestData
     /// Whether the output is active
     /// </summary>
     [JsonPropertyName("outputActive")]
-    public bool OutputActive { get; set; }
-    
+    public required bool OutputActive { get; set; }
+
     /// <summary>
     /// Whether the output is paused
     /// </summary>
     [JsonPropertyName("outputPaused")]
-    public bool OutputPaused { get; set; }
-    
+    public required bool OutputPaused { get; set; }
+
     /// <summary>
     /// Current formatted timecode string for the output
     /// </summary>
     [JsonPropertyName("outputTimecode")]
-    public string OutputTimecode { get; set; } = string.Empty;
-    
+    public required string OutputTimecode { get; set; }
+
     /// <summary>
     /// Current duration in milliseconds for the output
     /// </summary>
     [JsonPropertyName("outputDuration")]
-    public double OutputDuration { get; set; }
-    
+    public required double OutputDuration { get; set; }
+
     /// <summary>
     /// Number of bytes sent by the output
     /// </summary>
     [JsonPropertyName("outputBytes")]
-    public double OutputBytes { get; set; }
-    
+    public required double OutputBytes { get; set; }
+
 }

@@ -48,6 +48,6 @@ public class ToggleInputMuteResponse : IObsWsRequestData
     /// Whether the input has been muted or unmuted
     /// </summary>
     [JsonPropertyName("inputMuted")]
-    public bool InputMuted { get; set; }
-    
+    public required bool InputMuted { get; set; }
+
 }

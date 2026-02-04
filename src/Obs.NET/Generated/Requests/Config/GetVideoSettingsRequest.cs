@@ -35,36 +35,36 @@ public class GetVideoSettingsResponse : IObsWsRequestData
     /// Numerator of the fractional FPS value
     /// </summary>
     [JsonPropertyName("fpsNumerator")]
-    public double FpsNumerator { get; set; }
-    
+    public required double FpsNumerator { get; set; }
+
     /// <summary>
     /// Denominator of the fractional FPS value
     /// </summary>
     [JsonPropertyName("fpsDenominator")]
-    public double FpsDenominator { get; set; }
-    
+    public required double FpsDenominator { get; set; }
+
     /// <summary>
     /// Width of the base (canvas) resolution in pixels
     /// </summary>
     [JsonPropertyName("baseWidth")]
-    public double BaseWidth { get; set; }
-    
+    public required double BaseWidth { get; set; }
+
     /// <summary>
     /// Height of the base (canvas) resolution in pixels
     /// </summary>
     [JsonPropertyName("baseHeight")]
-    public double BaseHeight { get; set; }
-    
+    public required double BaseHeight { get; set; }
+
     /// <summary>
     /// Width of the output resolution in pixels
     /// </summary>
     [JsonPropertyName("outputWidth")]
-    public double OutputWidth { get; set; }
-    
+    public required double OutputWidth { get; set; }
+
     /// <summary>
     /// Height of the output resolution in pixels
     /// </summary>
     [JsonPropertyName("outputHeight")]
-    public double OutputHeight { get; set; }
-    
+    public required double OutputHeight { get; set; }
+
 }

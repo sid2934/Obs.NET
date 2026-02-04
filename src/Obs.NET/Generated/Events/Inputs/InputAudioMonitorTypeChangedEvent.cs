@@ -34,19 +34,19 @@ public class InputAudioMonitorTypeChangedEvent : IObsWsEventData
     /// Name of the input
     /// </summary>
     [JsonPropertyName("inputName")]
-    public string InputName { get; set; } = string.Empty;
-    
+    public required string InputName { get; set; }
+
     /// <summary>
     /// UUID of the input
     /// </summary>
     [JsonPropertyName("inputUuid")]
-    public string InputUuid { get; set; } = string.Empty;
-    
+    public required string InputUuid { get; set; }
+
     /// <summary>
     /// New monitor type of the input
     /// </summary>
     [JsonPropertyName("monitorType")]
-    public string MonitorType { get; set; } = string.Empty;
-    
+    public required string MonitorType { get; set; }
+
 }
 

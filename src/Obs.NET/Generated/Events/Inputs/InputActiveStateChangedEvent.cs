@@ -30,19 +30,19 @@ public class InputActiveStateChangedEvent : IObsWsEventData
     /// Name of the input
     /// </summary>
     [JsonPropertyName("inputName")]
-    public string InputName { get; set; } = string.Empty;
-    
+    public required string InputName { get; set; }
+
     /// <summary>
     /// UUID of the input
     /// </summary>
     [JsonPropertyName("inputUuid")]
-    public string InputUuid { get; set; } = string.Empty;
-    
+    public required string InputUuid { get; set; }
+
     /// <summary>
     /// Whether the input is active
     /// </summary>
     [JsonPropertyName("videoActive")]
-    public bool VideoActive { get; set; }
-    
+    public required bool VideoActive { get; set; }
+
 }
 

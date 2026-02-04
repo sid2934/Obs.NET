@@ -56,18 +56,18 @@ public class CallVendorRequestResponse : IObsWsRequestData
     /// Echoed of `vendorName`
     /// </summary>
     [JsonPropertyName("vendorName")]
-    public string VendorName { get; set; } = string.Empty;
-    
+    public required string VendorName { get; set; }
+
     /// <summary>
     /// Echoed of `requestType`
     /// </summary>
     [JsonPropertyName("requestType")]
-    public string SubRequestType { get; set; } = string.Empty;
-    
+    public required string SubRequestType { get; set; }
+
     /// <summary>
     /// Object containing appropriate response data. {} if request does not provide any response data
     /// </summary>
     [JsonPropertyName("responseData")]
-    public System.Text.Json.JsonElement ResponseData { get; set; }
-    
+    public required System.Text.Json.JsonElement ResponseData { get; set; }
+
 }

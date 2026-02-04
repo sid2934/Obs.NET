@@ -12,7 +12,7 @@
         <IsPackable>true</IsPackable>
         <PackageId>Obs.NET</PackageId>
         <Title>Obs.NET - OBS Studio Integration Library</Title>
-        <Description>A full-featured OBS Studio WebSocket v5 client library for .NET. Provides async/await API for controlling OBS Studio with 80+ request types, strongly-typed events, automatic reconnection, and SHA256 authentication support.</Description>
+        <Description>A full-featured OBS Studio WebSocket v5 client library for .NET. Provides async/await API for controlling OBS Studio with 146 request types, 57 strongly-typed events, automatic reconnection, and SHA256 authentication support.</Description>
         <Authors>sid2934</Authors>
         <PackageTags>obs;obs-studio;websocket;obs-websocket;streaming;recording;video;broadcast</PackageTags>
         <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>

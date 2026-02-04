@@ -71,6 +71,6 @@ public class CreateSceneItemResponse : IObsWsRequestData
     /// Numeric ID of the scene item
     /// </summary>
     [JsonPropertyName("sceneItemId")]
-    public double SceneItemId { get; set; }
-    
+    public required double SceneItemId { get; set; }
+
 }

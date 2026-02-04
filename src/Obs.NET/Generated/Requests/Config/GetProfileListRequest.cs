@@ -33,12 +33,12 @@ public class GetProfileListResponse : IObsWsRequestData
     /// The name of the current profile
     /// </summary>
     [JsonPropertyName("currentProfileName")]
-    public string CurrentProfileName { get; set; } = string.Empty;
-    
+    public required string CurrentProfileName { get; set; }
+
     /// <summary>
     /// Array of all available profiles
     /// </summary>
     [JsonPropertyName("profiles")]
-    public IEnumerable<string> Profiles { get; set; }
-    
+    public required IEnumerable<string> Profiles { get; set; }
+
 }

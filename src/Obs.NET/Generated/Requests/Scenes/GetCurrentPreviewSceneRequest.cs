@@ -37,24 +37,24 @@ public class GetCurrentPreviewSceneResponse : IObsWsRequestData
     /// Current preview scene name
     /// </summary>
     [JsonPropertyName("sceneName")]
-    public string SceneName { get; set; } = string.Empty;
-    
+    public required string SceneName { get; set; }
+
     /// <summary>
     /// Current preview scene UUID
     /// </summary>
     [JsonPropertyName("sceneUuid")]
-    public string SceneUuid { get; set; } = string.Empty;
-    
+    public required string SceneUuid { get; set; }
+
     /// <summary>
     /// Current preview scene name
     /// </summary>
     [JsonPropertyName("currentPreviewSceneName")]
-    public string CurrentPreviewSceneName { get; set; } = string.Empty;
-    
+    public required string CurrentPreviewSceneName { get; set; }
+
     /// <summary>
     /// Current preview scene UUID
     /// </summary>
     [JsonPropertyName("currentPreviewSceneUuid")]
-    public string CurrentPreviewSceneUuid { get; set; } = string.Empty;
-    
+    public required string CurrentPreviewSceneUuid { get; set; }
+
 }

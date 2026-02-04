@@ -28,37 +28,37 @@ public class SceneItemCreatedEvent : IObsWsEventData
     /// Name of the scene the item was added to
     /// </summary>
     [JsonPropertyName("sceneName")]
-    public string SceneName { get; set; } = string.Empty;
-    
+    public required string SceneName { get; set; }
+
     /// <summary>
     /// UUID of the scene the item was added to
     /// </summary>
     [JsonPropertyName("sceneUuid")]
-    public string SceneUuid { get; set; } = string.Empty;
-    
+    public required string SceneUuid { get; set; }
+
     /// <summary>
     /// Name of the underlying source (input/scene)
     /// </summary>
     [JsonPropertyName("sourceName")]
-    public string SourceName { get; set; } = string.Empty;
-    
+    public required string SourceName { get; set; }
+
     /// <summary>
     /// UUID of the underlying source (input/scene)
     /// </summary>
     [JsonPropertyName("sourceUuid")]
-    public string SourceUuid { get; set; } = string.Empty;
-    
+    public required string SourceUuid { get; set; }
+
     /// <summary>
     /// Numeric ID of the scene item
     /// </summary>
     [JsonPropertyName("sceneItemId")]
-    public double SceneItemId { get; set; }
-    
+    public required double SceneItemId { get; set; }
+
     /// <summary>
     /// Index position of the item
     /// </summary>
     [JsonPropertyName("sceneItemIndex")]
-    public double SceneItemIndex { get; set; }
-    
+    public required double SceneItemIndex { get; set; }
+
 }
 

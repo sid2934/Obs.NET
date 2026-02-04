@@ -50,6 +50,6 @@ public class GetSceneItemListResponse : IObsWsRequestData
     /// Array of scene items in the scene
     /// </summary>
     [JsonPropertyName("sceneItems")]
-    public IEnumerable<Obs.NET.Models.ObsSceneItem> SceneItems { get; set; }
-    
+    public required IEnumerable<Obs.NET.Models.ObsSceneItem> SceneItems { get; set; }
+
 }

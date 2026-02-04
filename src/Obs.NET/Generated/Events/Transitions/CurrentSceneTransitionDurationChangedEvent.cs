@@ -28,7 +28,7 @@ public class CurrentSceneTransitionDurationChangedEvent : IObsWsEventData
     /// Transition duration in milliseconds
     /// </summary>
     [JsonPropertyName("transitionDuration")]
-    public double TransitionDuration { get; set; }
-    
+    public required double TransitionDuration { get; set; }
+
 }
 

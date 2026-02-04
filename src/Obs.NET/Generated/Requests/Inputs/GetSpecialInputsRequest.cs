@@ -33,36 +33,36 @@ public class GetSpecialInputsResponse : IObsWsRequestData
     /// Name of the Desktop Audio input
     /// </summary>
     [JsonPropertyName("desktop1")]
-    public string Desktop1 { get; set; } = string.Empty;
-    
+    public required string Desktop1 { get; set; }
+
     /// <summary>
     /// Name of the Desktop Audio 2 input
     /// </summary>
     [JsonPropertyName("desktop2")]
-    public string Desktop2 { get; set; } = string.Empty;
-    
+    public required string Desktop2 { get; set; }
+
     /// <summary>
     /// Name of the Mic/Auxiliary Audio input
     /// </summary>
     [JsonPropertyName("mic1")]
-    public string Mic1 { get; set; } = string.Empty;
-    
+    public required string Mic1 { get; set; }
+
     /// <summary>
     /// Name of the Mic/Auxiliary Audio 2 input
     /// </summary>
     [JsonPropertyName("mic2")]
-    public string Mic2 { get; set; } = string.Empty;
-    
+    public required string Mic2 { get; set; }
+
     /// <summary>
     /// Name of the Mic/Auxiliary Audio 3 input
     /// </summary>
     [JsonPropertyName("mic3")]
-    public string Mic3 { get; set; } = string.Empty;
-    
+    public required string Mic3 { get; set; }
+
     /// <summary>
     /// Name of the Mic/Auxiliary Audio 4 input
     /// </summary>
     [JsonPropertyName("mic4")]
-    public string Mic4 { get; set; } = string.Empty;
-    
+    public required string Mic4 { get; set; }
+
 }

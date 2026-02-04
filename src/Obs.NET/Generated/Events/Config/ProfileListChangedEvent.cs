@@ -28,7 +28,7 @@ public class ProfileListChangedEvent : IObsWsEventData
     /// Updated list of profiles
     /// </summary>
     [JsonPropertyName("profiles")]
-    public IEnumerable<string> Profiles { get; set; }
-    
+    public required IEnumerable<string> Profiles { get; set; }
+
 }
 

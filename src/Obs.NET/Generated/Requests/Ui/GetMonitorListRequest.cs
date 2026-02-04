@@ -33,6 +33,6 @@ public class GetMonitorListResponse : IObsWsRequestData
     /// a list of detected monitors with some information
     /// </summary>
     [JsonPropertyName("monitors")]
-    public IEnumerable<Obs.NET.Models.ObsMonitor> Monitors { get; set; }
-    
+    public required IEnumerable<Obs.NET.Models.ObsMonitor> Monitors { get; set; }
+
 }

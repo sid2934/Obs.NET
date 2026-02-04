@@ -28,19 +28,19 @@ public class InputAudioSyncOffsetChangedEvent : IObsWsEventData
     /// Name of the input
     /// </summary>
     [JsonPropertyName("inputName")]
-    public string InputName { get; set; } = string.Empty;
-    
+    public required string InputName { get; set; }
+
     /// <summary>
     /// UUID of the input
     /// </summary>
     [JsonPropertyName("inputUuid")]
-    public string InputUuid { get; set; } = string.Empty;
-    
+    public required string InputUuid { get; set; }
+
     /// <summary>
     /// New sync offset in milliseconds
     /// </summary>
     [JsonPropertyName("inputAudioSyncOffset")]
-    public double InputAudioSyncOffset { get; set; }
-    
+    public required double InputAudioSyncOffset { get; set; }
+
 }
 

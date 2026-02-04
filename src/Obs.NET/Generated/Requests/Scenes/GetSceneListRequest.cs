@@ -33,30 +33,30 @@ public class GetSceneListResponse : IObsWsRequestData
     /// Current program scene name. Can be `null` if internal state desync
     /// </summary>
     [JsonPropertyName("currentProgramSceneName")]
-    public string CurrentProgramSceneName { get; set; } = string.Empty;
-    
+    public required string CurrentProgramSceneName { get; set; }
+
     /// <summary>
     /// Current program scene UUID. Can be `null` if internal state desync
     /// </summary>
     [JsonPropertyName("currentProgramSceneUuid")]
-    public string CurrentProgramSceneUuid { get; set; } = string.Empty;
-    
+    public required string CurrentProgramSceneUuid { get; set; }
+
     /// <summary>
     /// Current preview scene name. `null` if not in studio mode
     /// </summary>
     [JsonPropertyName("currentPreviewSceneName")]
-    public string CurrentPreviewSceneName { get; set; } = string.Empty;
-    
+    public required string CurrentPreviewSceneName { get; set; }
+
     /// <summary>
     /// Current preview scene UUID. `null` if not in studio mode
     /// </summary>
     [JsonPropertyName("currentPreviewSceneUuid")]
-    public string CurrentPreviewSceneUuid { get; set; } = string.Empty;
-    
+    public required string CurrentPreviewSceneUuid { get; set; }
+
     /// <summary>
     /// Array of scenes
     /// </summary>
     [JsonPropertyName("scenes")]
-    public IEnumerable<Obs.NET.Models.ObsScene> Scenes { get; set; }
-    
+    public required IEnumerable<Obs.NET.Models.ObsScene> Scenes { get; set; }
+
 }

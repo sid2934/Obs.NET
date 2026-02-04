@@ -40,6 +40,6 @@ public class ToggleOutputResponse : IObsWsRequestData
     /// Whether the output is active
     /// </summary>
     [JsonPropertyName("outputActive")]
-    public bool OutputActive { get; set; }
-    
+    public required bool OutputActive { get; set; }
+
 }

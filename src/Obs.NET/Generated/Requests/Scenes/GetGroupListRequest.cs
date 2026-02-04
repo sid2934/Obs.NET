@@ -35,6 +35,6 @@ public class GetGroupListResponse : IObsWsRequestData
     /// Array of group names
     /// </summary>
     [JsonPropertyName("groups")]
-    public IEnumerable<string> Groups { get; set; }
-    
+    public required IEnumerable<string> Groups { get; set; }
+
 }

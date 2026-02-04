@@ -168,6 +168,7 @@ public class EventDeserializationTests
                 "inputUuid": "input-uuid-789",
                 "inputKind": "dshow_input",
                 "unversionedInputKind": "dshow_input",
+                "inputKindCaps": 1234,
                 "inputSettings": {
                     "video_device_id": "device123"
                 },
@@ -184,6 +185,7 @@ public class EventDeserializationTests
         await Assert.That(eventData.InputUuid).IsEqualTo("input-uuid-789");
         await Assert.That(eventData.InputKind).IsEqualTo("dshow_input");
         await Assert.That(eventData.UnversionedInputKind).IsEqualTo("dshow_input");
+        await Assert.That(eventData.InputKindCaps).IsEqualTo(1234);
     }
 
     /// <summary>
@@ -292,22 +294,25 @@ public class EventDeserializationTests
     /// The deserializer should handle these cases without throwing exceptions.
     /// </summary>
     [Test]
-    public async Task EventDeserialization_HandlesMinimalJson()
+    public async Task EventDeserialization_RequiresAllFields()
     {
-        // Arrange - Minimal JSON with only required fields
+        // Arrange - JSON with all required fields
         var json = """
             {
-                "sceneName": "Test"
+                "sceneName": "Test",
+                "sceneUuid": "uuid-12345",
+                "isGroup": false
             }
             """;
 
         // Act
         var eventData = JsonSerializer.Deserialize<SceneCreatedEvent>(json, _jsonOptions);
 
-        // Assert - Should not throw and should have default values
+        // Assert - All fields should be populated
         await Assert.That(eventData).IsNotNull();
         await Assert.That(eventData!.SceneName).IsEqualTo("Test");
-        await Assert.That(eventData.SceneUuid).IsEqualTo(string.Empty); // Default value
+        await Assert.That(eventData.SceneUuid).IsEqualTo("uuid-12345");
+        await Assert.That(eventData.IsGroup).IsFalse();
     }
 
     /// <summary>

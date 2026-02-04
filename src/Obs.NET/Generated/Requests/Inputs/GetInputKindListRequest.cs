@@ -41,6 +41,6 @@ public class GetInputKindListResponse : IObsWsRequestData
     /// Array of input kinds
     /// </summary>
     [JsonPropertyName("inputKinds")]
-    public IEnumerable<string> InputKinds { get; set; }
-    
+    public required IEnumerable<string> InputKinds { get; set; }
+
 }

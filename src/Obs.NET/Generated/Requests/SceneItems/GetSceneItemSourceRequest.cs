@@ -54,12 +54,12 @@ public class GetSceneItemSourceResponse : IObsWsRequestData
     /// Name of the source associated with the scene item
     /// </summary>
     [JsonPropertyName("sourceName")]
-    public string SourceName { get; set; } = string.Empty;
-    
+    public required string SourceName { get; set; }
+
     /// <summary>
     /// UUID of the source associated with the scene item
     /// </summary>
     [JsonPropertyName("sourceUuid")]
-    public string SourceUuid { get; set; } = string.Empty;
-    
+    public required string SourceUuid { get; set; }
+
 }

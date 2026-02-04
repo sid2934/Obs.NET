@@ -40,48 +40,48 @@ public class GetOutputStatusResponse : IObsWsRequestData
     /// Whether the output is active
     /// </summary>
     [JsonPropertyName("outputActive")]
-    public bool OutputActive { get; set; }
-    
+    public required bool OutputActive { get; set; }
+
     /// <summary>
     /// Whether the output is reconnecting
     /// </summary>
     [JsonPropertyName("outputReconnecting")]
-    public bool OutputReconnecting { get; set; }
-    
+    public required bool OutputReconnecting { get; set; }
+
     /// <summary>
     /// Current formatted timecode string for the output
     /// </summary>
     [JsonPropertyName("outputTimecode")]
-    public string OutputTimecode { get; set; } = string.Empty;
-    
+    public required string OutputTimecode { get; set; }
+
     /// <summary>
     /// Current duration in milliseconds for the output
     /// </summary>
     [JsonPropertyName("outputDuration")]
-    public double OutputDuration { get; set; }
-    
+    public required double OutputDuration { get; set; }
+
     /// <summary>
     /// Congestion of the output
     /// </summary>
     [JsonPropertyName("outputCongestion")]
-    public double OutputCongestion { get; set; }
-    
+    public required double OutputCongestion { get; set; }
+
     /// <summary>
     /// Number of bytes sent by the output
     /// </summary>
     [JsonPropertyName("outputBytes")]
-    public double OutputBytes { get; set; }
-    
+    public required double OutputBytes { get; set; }
+
     /// <summary>
     /// Number of frames skipped by the output&apos;s process
     /// </summary>
     [JsonPropertyName("outputSkippedFrames")]
-    public double OutputSkippedFrames { get; set; }
-    
+    public required double OutputSkippedFrames { get; set; }
+
     /// <summary>
     /// Total number of frames delivered by the output&apos;s process
     /// </summary>
     [JsonPropertyName("outputTotalFrames")]
-    public double OutputTotalFrames { get; set; }
-    
+    public required double OutputTotalFrames { get; set; }
+
 }

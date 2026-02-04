@@ -33,6 +33,6 @@ public class GetLastReplayBufferReplayResponse : IObsWsRequestData
     /// File path
     /// </summary>
     [JsonPropertyName("savedReplayPath")]
-    public string SavedReplayPath { get; set; } = string.Empty;
-    
+    public required string SavedReplayPath { get; set; }
+
 }

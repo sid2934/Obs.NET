@@ -28,19 +28,19 @@ public class SceneItemSelectedEvent : IObsWsEventData
     /// Name of the scene the item is in
     /// </summary>
     [JsonPropertyName("sceneName")]
-    public string SceneName { get; set; } = string.Empty;
-    
+    public required string SceneName { get; set; }
+
     /// <summary>
     /// UUID of the scene the item is in
     /// </summary>
     [JsonPropertyName("sceneUuid")]
-    public string SceneUuid { get; set; } = string.Empty;
-    
+    public required string SceneUuid { get; set; }
+
     /// <summary>
     /// Numeric ID of the scene item
     /// </summary>
     [JsonPropertyName("sceneItemId")]
-    public double SceneItemId { get; set; }
-    
+    public required double SceneItemId { get; set; }
+
 }
 

@@ -33,42 +33,42 @@ public class GetCurrentSceneTransitionResponse : IObsWsRequestData
     /// Name of the transition
     /// </summary>
     [JsonPropertyName("transitionName")]
-    public string TransitionName { get; set; } = string.Empty;
-    
+    public required string TransitionName { get; set; }
+
     /// <summary>
     /// UUID of the transition
     /// </summary>
     [JsonPropertyName("transitionUuid")]
-    public string TransitionUuid { get; set; } = string.Empty;
-    
+    public required string TransitionUuid { get; set; }
+
     /// <summary>
     /// Kind of the transition
     /// </summary>
     [JsonPropertyName("transitionKind")]
-    public string TransitionKind { get; set; } = string.Empty;
-    
+    public required string TransitionKind { get; set; }
+
     /// <summary>
     /// Whether the transition uses a fixed (unconfigurable) duration
     /// </summary>
     [JsonPropertyName("transitionFixed")]
-    public bool TransitionFixed { get; set; }
-    
+    public required bool TransitionFixed { get; set; }
+
     /// <summary>
     /// Configured transition duration in milliseconds. `null` if transition is fixed
     /// </summary>
     [JsonPropertyName("transitionDuration")]
-    public double TransitionDuration { get; set; }
-    
+    public required double TransitionDuration { get; set; }
+
     /// <summary>
     /// Whether the transition supports being configured
     /// </summary>
     [JsonPropertyName("transitionConfigurable")]
-    public bool TransitionConfigurable { get; set; }
-    
+    public required bool TransitionConfigurable { get; set; }
+
     /// <summary>
     /// Object of settings for the transition. `null` if transition is not configurable
     /// </summary>
     [JsonPropertyName("transitionSettings")]
-    public System.Text.Json.JsonElement TransitionSettings { get; set; }
-    
+    public required System.Text.Json.JsonElement TransitionSettings { get; set; }
+
 }
