@@ -62,6 +62,6 @@ public class GetInputDeinterlaceModeResponse : IObsWsRequestData
     /// Deinterlace mode of the input
     /// </summary>
     [JsonPropertyName("inputDeinterlaceMode")]
-    public string InputDeinterlaceMode { get; set; } = string.Empty;
-    
+    public required string InputDeinterlaceMode { get; set; }
+
 }

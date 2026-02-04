@@ -40,6 +40,6 @@ public class GetInputDefaultSettingsResponse : IObsWsRequestData
     /// Object of default settings for the input kind
     /// </summary>
     [JsonPropertyName("defaultInputSettings")]
-    public System.Text.Json.JsonElement DefaultInputSettings { get; set; }
-    
+    public required System.Text.Json.JsonElement DefaultInputSettings { get; set; }
+
 }

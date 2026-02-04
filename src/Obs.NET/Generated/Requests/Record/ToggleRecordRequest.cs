@@ -33,6 +33,6 @@ public class ToggleRecordResponse : IObsWsRequestData
     /// The new active state of the output
     /// </summary>
     [JsonPropertyName("outputActive")]
-    public bool OutputActive { get; set; }
-    
+    public required bool OutputActive { get; set; }
+
 }

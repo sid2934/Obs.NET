@@ -40,6 +40,6 @@ public class CreateSceneResponse : IObsWsRequestData
     /// UUID of the created scene
     /// </summary>
     [JsonPropertyName("sceneUuid")]
-    public string SceneUuid { get; set; } = string.Empty;
-    
+    public required string SceneUuid { get; set; }
+
 }

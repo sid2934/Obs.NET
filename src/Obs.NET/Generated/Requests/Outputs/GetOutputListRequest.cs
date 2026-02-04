@@ -33,6 +33,6 @@ public class GetOutputListResponse : IObsWsRequestData
     /// Array of outputs
     /// </summary>
     [JsonPropertyName("outputs")]
-    public IEnumerable<Obs.NET.Models.ObsOutput> Outputs { get; set; }
-    
+    public required IEnumerable<Obs.NET.Models.ObsOutput> Outputs { get; set; }
+
 }

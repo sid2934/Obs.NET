@@ -28,7 +28,7 @@ public class SceneCollectionListChangedEvent : IObsWsEventData
     /// Updated list of scene collections
     /// </summary>
     [JsonPropertyName("sceneCollections")]
-    public IEnumerable<string> SceneCollections { get; set; }
-    
+    public required IEnumerable<string> SceneCollections { get; set; }
+
 }
 

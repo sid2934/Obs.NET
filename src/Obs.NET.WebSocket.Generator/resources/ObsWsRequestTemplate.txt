@@ -47,8 +47,8 @@ public class {{ request_type }}Response : IObsWsRequestData
     /// {{ field.value_description }}
     /// </summary>
     [JsonPropertyName("{{ field.value_name }}")]
-    public {{ field.clr_type }} {{ field.property_name }} { get; set; }{{ if field.clr_type == "string" }} = string.Empty;{{ end }}
-    
+    public required {{ field.clr_type }} {{ field.property_name }} { get; set; }
+
 {{~ end ~}}
 {{~ end ~}}
 }

@@ -58,6 +58,6 @@ public class GetSceneItemIndexResponse : IObsWsRequestData
     /// Index position of the scene item
     /// </summary>
     [JsonPropertyName("sceneItemIndex")]
-    public double SceneItemIndex { get; set; }
-    
+    public required double SceneItemIndex { get; set; }
+
 }

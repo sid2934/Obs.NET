@@ -54,6 +54,6 @@ public class GetInputAudioMonitorTypeResponse : IObsWsRequestData
     /// Audio monitor type
     /// </summary>
     [JsonPropertyName("monitorType")]
-    public string MonitorType { get; set; } = string.Empty;
-    
+    public required string MonitorType { get; set; }
+
 }

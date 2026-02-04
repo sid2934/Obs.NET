@@ -41,6 +41,6 @@ public class GetInputListResponse : IObsWsRequestData
     /// Array of inputs
     /// </summary>
     [JsonPropertyName("inputs")]
-    public IEnumerable<Obs.NET.Models.ObsInput> Inputs { get; set; }
-    
+    public required IEnumerable<Obs.NET.Models.ObsInput> Inputs { get; set; }
+
 }

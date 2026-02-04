@@ -80,6 +80,6 @@ public class GetSourceScreenshotResponse : IObsWsRequestData
     /// Base64-encoded screenshot
     /// </summary>
     [JsonPropertyName("imageData")]
-    public string ImageData { get; set; } = string.Empty;
-    
+    public required string ImageData { get; set; }
+
 }

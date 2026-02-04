@@ -35,6 +35,6 @@ public class GetHotkeyListResponse : IObsWsRequestData
     /// Array of hotkey names
     /// </summary>
     [JsonPropertyName("hotkeys")]
-    public IEnumerable<string> Hotkeys { get; set; }
-    
+    public required IEnumerable<string> Hotkeys { get; set; }
+
 }

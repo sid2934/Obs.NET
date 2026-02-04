@@ -35,6 +35,6 @@ public class GetSourceFilterKindListResponse : IObsWsRequestData
     /// Array of source filter kinds
     /// </summary>
     [JsonPropertyName("sourceFilterKinds")]
-    public IEnumerable<string> SourceFilterKinds { get; set; }
-    
+    public required IEnumerable<string> SourceFilterKinds { get; set; }
+
 }

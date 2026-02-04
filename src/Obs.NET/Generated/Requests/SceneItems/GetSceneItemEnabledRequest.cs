@@ -56,6 +56,6 @@ public class GetSceneItemEnabledResponse : IObsWsRequestData
     /// Whether the scene item is enabled. `true` for enabled, `false` for disabled
     /// </summary>
     [JsonPropertyName("sceneItemEnabled")]
-    public bool SceneItemEnabled { get; set; }
-    
+    public required bool SceneItemEnabled { get; set; }
+
 }

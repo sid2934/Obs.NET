@@ -28,19 +28,19 @@ public class SourceFilterEnableStateChangedEvent : IObsWsEventData
     /// Name of the source the filter is on
     /// </summary>
     [JsonPropertyName("sourceName")]
-    public string SourceName { get; set; } = string.Empty;
-    
+    public required string SourceName { get; set; }
+
     /// <summary>
     /// Name of the filter
     /// </summary>
     [JsonPropertyName("filterName")]
-    public string FilterName { get; set; } = string.Empty;
-    
+    public required string FilterName { get; set; }
+
     /// <summary>
     /// Whether the filter is enabled
     /// </summary>
     [JsonPropertyName("filterEnabled")]
-    public bool FilterEnabled { get; set; }
-    
+    public required bool FilterEnabled { get; set; }
+
 }
 

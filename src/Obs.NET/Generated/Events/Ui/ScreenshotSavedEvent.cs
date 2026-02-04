@@ -32,7 +32,7 @@ public class ScreenshotSavedEvent : IObsWsEventData
     /// Path of the saved image file
     /// </summary>
     [JsonPropertyName("savedScreenshotPath")]
-    public string SavedScreenshotPath { get; set; } = string.Empty;
-    
+    public required string SavedScreenshotPath { get; set; }
+
 }
 

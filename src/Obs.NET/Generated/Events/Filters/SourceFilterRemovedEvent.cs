@@ -28,13 +28,13 @@ public class SourceFilterRemovedEvent : IObsWsEventData
     /// Name of the source the filter was on
     /// </summary>
     [JsonPropertyName("sourceName")]
-    public string SourceName { get; set; } = string.Empty;
-    
+    public required string SourceName { get; set; }
+
     /// <summary>
     /// Name of the filter
     /// </summary>
     [JsonPropertyName("filterName")]
-    public string FilterName { get; set; } = string.Empty;
-    
+    public required string FilterName { get; set; }
+
 }
 

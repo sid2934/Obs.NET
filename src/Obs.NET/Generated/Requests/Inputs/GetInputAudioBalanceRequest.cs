@@ -48,6 +48,6 @@ public class GetInputAudioBalanceResponse : IObsWsRequestData
     /// Audio balance value from 0.0-1.0
     /// </summary>
     [JsonPropertyName("inputAudioBalance")]
-    public double InputAudioBalance { get; set; }
-    
+    public required double InputAudioBalance { get; set; }
+
 }

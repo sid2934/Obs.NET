@@ -33,12 +33,12 @@ public class GetStreamServiceSettingsResponse : IObsWsRequestData
     /// Stream service type, like `rtmp_custom` or `rtmp_common`
     /// </summary>
     [JsonPropertyName("streamServiceType")]
-    public string StreamServiceType { get; set; } = string.Empty;
-    
+    public required string StreamServiceType { get; set; }
+
     /// <summary>
     /// Stream service settings
     /// </summary>
     [JsonPropertyName("streamServiceSettings")]
-    public System.Text.Json.JsonElement StreamServiceSettings { get; set; }
-    
+    public required System.Text.Json.JsonElement StreamServiceSettings { get; set; }
+
 }

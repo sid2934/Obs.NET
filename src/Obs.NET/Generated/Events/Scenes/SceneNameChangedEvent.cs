@@ -28,19 +28,19 @@ public class SceneNameChangedEvent : IObsWsEventData
     /// UUID of the scene
     /// </summary>
     [JsonPropertyName("sceneUuid")]
-    public string SceneUuid { get; set; } = string.Empty;
-    
+    public required string SceneUuid { get; set; }
+
     /// <summary>
     /// Old name of the scene
     /// </summary>
     [JsonPropertyName("oldSceneName")]
-    public string OldSceneName { get; set; } = string.Empty;
-    
+    public required string OldSceneName { get; set; }
+
     /// <summary>
     /// New name of the scene
     /// </summary>
     [JsonPropertyName("sceneName")]
-    public string SceneName { get; set; } = string.Empty;
-    
+    public required string SceneName { get; set; }
+
 }
 

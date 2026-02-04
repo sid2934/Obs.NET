@@ -28,7 +28,7 @@ public class StudioModeStateChangedEvent : IObsWsEventData
     /// True == Enabled, False == Disabled
     /// </summary>
     [JsonPropertyName("studioModeEnabled")]
-    public bool StudioModeEnabled { get; set; }
-    
+    public required bool StudioModeEnabled { get; set; }
+
 }
 

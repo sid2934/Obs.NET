@@ -28,13 +28,13 @@ public class SceneTransitionStartedEvent : IObsWsEventData
     /// Scene transition name
     /// </summary>
     [JsonPropertyName("transitionName")]
-    public string TransitionName { get; set; } = string.Empty;
-    
+    public required string TransitionName { get; set; }
+
     /// <summary>
     /// Scene transition UUID
     /// </summary>
     [JsonPropertyName("transitionUuid")]
-    public string TransitionUuid { get; set; } = string.Empty;
-    
+    public required string TransitionUuid { get; set; }
+
 }
 

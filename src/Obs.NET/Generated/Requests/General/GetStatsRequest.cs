@@ -33,66 +33,66 @@ public class GetStatsResponse : IObsWsRequestData
     /// Current CPU usage in percent
     /// </summary>
     [JsonPropertyName("cpuUsage")]
-    public double CpuUsage { get; set; }
-    
+    public required double CpuUsage { get; set; }
+
     /// <summary>
     /// Amount of memory in MB currently being used by OBS
     /// </summary>
     [JsonPropertyName("memoryUsage")]
-    public double MemoryUsage { get; set; }
-    
+    public required double MemoryUsage { get; set; }
+
     /// <summary>
     /// Available disk space on the device being used for recording storage
     /// </summary>
     [JsonPropertyName("availableDiskSpace")]
-    public double AvailableDiskSpace { get; set; }
-    
+    public required double AvailableDiskSpace { get; set; }
+
     /// <summary>
     /// Current FPS being rendered
     /// </summary>
     [JsonPropertyName("activeFps")]
-    public double ActiveFps { get; set; }
-    
+    public required double ActiveFps { get; set; }
+
     /// <summary>
     /// Average time in milliseconds that OBS is taking to render a frame
     /// </summary>
     [JsonPropertyName("averageFrameRenderTime")]
-    public double AverageFrameRenderTime { get; set; }
-    
+    public required double AverageFrameRenderTime { get; set; }
+
     /// <summary>
     /// Number of frames skipped by OBS in the render thread
     /// </summary>
     [JsonPropertyName("renderSkippedFrames")]
-    public double RenderSkippedFrames { get; set; }
-    
+    public required double RenderSkippedFrames { get; set; }
+
     /// <summary>
     /// Total number of frames outputted by the render thread
     /// </summary>
     [JsonPropertyName("renderTotalFrames")]
-    public double RenderTotalFrames { get; set; }
-    
+    public required double RenderTotalFrames { get; set; }
+
     /// <summary>
     /// Number of frames skipped by OBS in the output thread
     /// </summary>
     [JsonPropertyName("outputSkippedFrames")]
-    public double OutputSkippedFrames { get; set; }
-    
+    public required double OutputSkippedFrames { get; set; }
+
     /// <summary>
     /// Total number of frames outputted by the output thread
     /// </summary>
     [JsonPropertyName("outputTotalFrames")]
-    public double OutputTotalFrames { get; set; }
-    
+    public required double OutputTotalFrames { get; set; }
+
     /// <summary>
     /// Total number of messages received by obs-websocket from the client
     /// </summary>
     [JsonPropertyName("webSocketSessionIncomingMessages")]
-    public double WebSocketSessionIncomingMessages { get; set; }
-    
+    public required double WebSocketSessionIncomingMessages { get; set; }
+
     /// <summary>
     /// Total number of messages sent by obs-websocket to the client
     /// </summary>
     [JsonPropertyName("webSocketSessionOutgoingMessages")]
-    public double WebSocketSessionOutgoingMessages { get; set; }
-    
+    public required double WebSocketSessionOutgoingMessages { get; set; }
+
 }

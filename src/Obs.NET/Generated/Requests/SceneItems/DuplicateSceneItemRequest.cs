@@ -70,6 +70,6 @@ public class DuplicateSceneItemResponse : IObsWsRequestData
     /// Numeric ID of the duplicated scene item
     /// </summary>
     [JsonPropertyName("sceneItemId")]
-    public double SceneItemId { get; set; }
-    
+    public required double SceneItemId { get; set; }
+
 }

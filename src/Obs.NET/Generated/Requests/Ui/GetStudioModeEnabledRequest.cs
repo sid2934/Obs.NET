@@ -33,6 +33,6 @@ public class GetStudioModeEnabledResponse : IObsWsRequestData
     /// Whether studio mode is enabled
     /// </summary>
     [JsonPropertyName("studioModeEnabled")]
-    public bool StudioModeEnabled { get; set; }
-    
+    public required bool StudioModeEnabled { get; set; }
+
 }

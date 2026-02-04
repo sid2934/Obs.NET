@@ -74,12 +74,12 @@ public class CreateInputResponse : IObsWsRequestData
     /// UUID of the newly created input
     /// </summary>
     [JsonPropertyName("inputUuid")]
-    public string InputUuid { get; set; } = string.Empty;
-    
+    public required string InputUuid { get; set; }
+
     /// <summary>
     /// ID of the newly created scene item
     /// </summary>
     [JsonPropertyName("sceneItemId")]
-    public double SceneItemId { get; set; }
-    
+    public required double SceneItemId { get; set; }
+
 }

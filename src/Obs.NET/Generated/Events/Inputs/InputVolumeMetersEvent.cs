@@ -28,7 +28,7 @@ public class InputVolumeMetersEvent : IObsWsEventData
     /// Array of active inputs with their associated volume levels
     /// </summary>
     [JsonPropertyName("inputs")]
-    public IEnumerable<Obs.NET.Models.ObsInput> Inputs { get; set; }
-    
+    public required IEnumerable<Obs.NET.Models.ObsInput> Inputs { get; set; }
+
 }
 

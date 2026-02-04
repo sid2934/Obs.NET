@@ -30,7 +30,7 @@ public class SceneListChangedEvent : IObsWsEventData
     /// Updated array of scenes
     /// </summary>
     [JsonPropertyName("scenes")]
-    public IEnumerable<Obs.NET.Models.ObsScene> Scenes { get; set; }
-    
+    public required IEnumerable<Obs.NET.Models.ObsScene> Scenes { get; set; }
+
 }
 

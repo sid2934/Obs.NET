@@ -48,6 +48,6 @@ public class GetInputAudioTracksResponse : IObsWsRequestData
     /// Object of audio tracks and associated enable states
     /// </summary>
     [JsonPropertyName("inputAudioTracks")]
-    public System.Text.Json.JsonElement InputAudioTracks { get; set; }
-    
+    public required System.Text.Json.JsonElement InputAudioTracks { get; set; }
+
 }

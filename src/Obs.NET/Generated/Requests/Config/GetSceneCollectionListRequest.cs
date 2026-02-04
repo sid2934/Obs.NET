@@ -33,12 +33,12 @@ public class GetSceneCollectionListResponse : IObsWsRequestData
     /// The name of the current scene collection
     /// </summary>
     [JsonPropertyName("currentSceneCollectionName")]
-    public string CurrentSceneCollectionName { get; set; } = string.Empty;
-    
+    public required string CurrentSceneCollectionName { get; set; }
+
     /// <summary>
     /// Array of all available scene collections
     /// </summary>
     [JsonPropertyName("sceneCollections")]
-    public IEnumerable<string> SceneCollections { get; set; }
-    
+    public required IEnumerable<string> SceneCollections { get; set; }
+
 }

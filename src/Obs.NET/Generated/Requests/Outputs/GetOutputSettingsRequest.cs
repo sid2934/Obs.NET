@@ -40,6 +40,6 @@ public class GetOutputSettingsResponse : IObsWsRequestData
     /// Output settings
     /// </summary>
     [JsonPropertyName("outputSettings")]
-    public System.Text.Json.JsonElement OutputSettings { get; set; }
-    
+    public required System.Text.Json.JsonElement OutputSettings { get; set; }
+
 }

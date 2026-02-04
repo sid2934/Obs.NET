@@ -35,24 +35,24 @@ public class GetCurrentProgramSceneResponse : IObsWsRequestData
     /// Current program scene name
     /// </summary>
     [JsonPropertyName("sceneName")]
-    public string SceneName { get; set; } = string.Empty;
-    
+    public required string SceneName { get; set; }
+
     /// <summary>
     /// Current program scene UUID
     /// </summary>
     [JsonPropertyName("sceneUuid")]
-    public string SceneUuid { get; set; } = string.Empty;
-    
+    public required string SceneUuid { get; set; }
+
     /// <summary>
     /// Current program scene name (Deprecated)
     /// </summary>
     [JsonPropertyName("currentProgramSceneName")]
-    public string CurrentProgramSceneName { get; set; } = string.Empty;
-    
+    public required string CurrentProgramSceneName { get; set; }
+
     /// <summary>
     /// Current program scene UUID (Deprecated)
     /// </summary>
     [JsonPropertyName("currentProgramSceneUuid")]
-    public string CurrentProgramSceneUuid { get; set; } = string.Empty;
-    
+    public required string CurrentProgramSceneUuid { get; set; }
+
 }

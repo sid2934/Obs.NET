@@ -33,6 +33,6 @@ public class GetRecordDirectoryResponse : IObsWsRequestData
     /// Output directory
     /// </summary>
     [JsonPropertyName("recordDirectory")]
-    public string RecordDirectory { get; set; } = string.Empty;
-    
+    public required string RecordDirectory { get; set; }
+
 }

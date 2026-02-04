@@ -28,43 +28,43 @@ public class InputCreatedEvent : IObsWsEventData
     /// Name of the input
     /// </summary>
     [JsonPropertyName("inputName")]
-    public string InputName { get; set; } = string.Empty;
-    
+    public required string InputName { get; set; }
+
     /// <summary>
     /// UUID of the input
     /// </summary>
     [JsonPropertyName("inputUuid")]
-    public string InputUuid { get; set; } = string.Empty;
-    
+    public required string InputUuid { get; set; }
+
     /// <summary>
     /// The kind of the input
     /// </summary>
     [JsonPropertyName("inputKind")]
-    public string InputKind { get; set; } = string.Empty;
-    
+    public required string InputKind { get; set; }
+
     /// <summary>
     /// The unversioned kind of input (aka no `_v2` stuff)
     /// </summary>
     [JsonPropertyName("unversionedInputKind")]
-    public string UnversionedInputKind { get; set; } = string.Empty;
-    
+    public required string UnversionedInputKind { get; set; }
+
     /// <summary>
     /// Bitflag value for the caps that an input supports. See obs_source_info.output_flags in the libobs docs
     /// </summary>
     [JsonPropertyName("inputKindCaps")]
-    public double InputKindCaps { get; set; }
-    
+    public required double InputKindCaps { get; set; }
+
     /// <summary>
     /// The settings configured to the input when it was created
     /// </summary>
     [JsonPropertyName("inputSettings")]
-    public System.Text.Json.JsonElement InputSettings { get; set; }
-    
+    public required System.Text.Json.JsonElement InputSettings { get; set; }
+
     /// <summary>
     /// The default settings for the input
     /// </summary>
     [JsonPropertyName("defaultInputSettings")]
-    public System.Text.Json.JsonElement DefaultInputSettings { get; set; }
-    
+    public required System.Text.Json.JsonElement DefaultInputSettings { get; set; }
+
 }
 

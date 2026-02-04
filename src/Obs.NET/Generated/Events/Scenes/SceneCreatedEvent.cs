@@ -28,19 +28,19 @@ public class SceneCreatedEvent : IObsWsEventData
     /// Name of the new scene
     /// </summary>
     [JsonPropertyName("sceneName")]
-    public string SceneName { get; set; } = string.Empty;
-    
+    public required string SceneName { get; set; }
+
     /// <summary>
     /// UUID of the new scene
     /// </summary>
     [JsonPropertyName("sceneUuid")]
-    public string SceneUuid { get; set; } = string.Empty;
-    
+    public required string SceneUuid { get; set; }
+
     /// <summary>
     /// Whether the new scene is a group
     /// </summary>
     [JsonPropertyName("isGroup")]
-    public bool IsGroup { get; set; }
-    
+    public required bool IsGroup { get; set; }
+
 }
 

@@ -28,37 +28,37 @@ public class SourceFilterCreatedEvent : IObsWsEventData
     /// Name of the source the filter was added to
     /// </summary>
     [JsonPropertyName("sourceName")]
-    public string SourceName { get; set; } = string.Empty;
-    
+    public required string SourceName { get; set; }
+
     /// <summary>
     /// Name of the filter
     /// </summary>
     [JsonPropertyName("filterName")]
-    public string FilterName { get; set; } = string.Empty;
-    
+    public required string FilterName { get; set; }
+
     /// <summary>
     /// The kind of the filter
     /// </summary>
     [JsonPropertyName("filterKind")]
-    public string FilterKind { get; set; } = string.Empty;
-    
+    public required string FilterKind { get; set; }
+
     /// <summary>
     /// Index position of the filter
     /// </summary>
     [JsonPropertyName("filterIndex")]
-    public double FilterIndex { get; set; }
-    
+    public required double FilterIndex { get; set; }
+
     /// <summary>
     /// The settings configured to the filter when it was created
     /// </summary>
     [JsonPropertyName("filterSettings")]
-    public System.Text.Json.JsonElement FilterSettings { get; set; }
-    
+    public required System.Text.Json.JsonElement FilterSettings { get; set; }
+
     /// <summary>
     /// The default settings for the filter
     /// </summary>
     [JsonPropertyName("defaultFilterSettings")]
-    public System.Text.Json.JsonElement DefaultFilterSettings { get; set; }
-    
+    public required System.Text.Json.JsonElement DefaultFilterSettings { get; set; }
+
 }
 

@@ -40,6 +40,6 @@ public class GetSourceFilterDefaultSettingsResponse : IObsWsRequestData
     /// Object of default settings for the filter kind
     /// </summary>
     [JsonPropertyName("defaultFilterSettings")]
-    public System.Text.Json.JsonElement DefaultFilterSettings { get; set; }
-    
+    public required System.Text.Json.JsonElement DefaultFilterSettings { get; set; }
+
 }

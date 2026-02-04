@@ -56,6 +56,6 @@ public class GetSceneItemTransformResponse : IObsWsRequestData
     /// Object containing scene item transform info
     /// </summary>
     [JsonPropertyName("sceneItemTransform")]
-    public Obs.NET.Models.ObsSceneItemTransform SceneItemTransform { get; set; }
-    
+    public required Obs.NET.Models.ObsSceneItemTransform SceneItemTransform { get; set; }
+
 }

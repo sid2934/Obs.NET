@@ -50,6 +50,6 @@ public class GetInputAudioSyncOffsetResponse : IObsWsRequestData
     /// Audio sync offset in milliseconds
     /// </summary>
     [JsonPropertyName("inputAudioSyncOffset")]
-    public double InputAudioSyncOffset { get; set; }
-    
+    public required double InputAudioSyncOffset { get; set; }
+
 }

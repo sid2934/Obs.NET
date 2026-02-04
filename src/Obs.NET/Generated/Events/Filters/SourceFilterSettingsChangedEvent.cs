@@ -28,19 +28,19 @@ public class SourceFilterSettingsChangedEvent : IObsWsEventData
     /// Name of the source the filter is on
     /// </summary>
     [JsonPropertyName("sourceName")]
-    public string SourceName { get; set; } = string.Empty;
-    
+    public required string SourceName { get; set; }
+
     /// <summary>
     /// Name of the filter
     /// </summary>
     [JsonPropertyName("filterName")]
-    public string FilterName { get; set; } = string.Empty;
-    
+    public required string FilterName { get; set; }
+
     /// <summary>
     /// New settings object of the filter
     /// </summary>
     [JsonPropertyName("filterSettings")]
-    public System.Text.Json.JsonElement FilterSettings { get; set; }
-    
+    public required System.Text.Json.JsonElement FilterSettings { get; set; }
+
 }
 

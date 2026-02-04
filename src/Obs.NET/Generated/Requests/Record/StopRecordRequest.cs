@@ -33,6 +33,6 @@ public class StopRecordResponse : IObsWsRequestData
     /// File name for the saved recording
     /// </summary>
     [JsonPropertyName("outputPath")]
-    public string OutputPath { get; set; } = string.Empty;
-    
+    public required string OutputPath { get; set; }
+
 }

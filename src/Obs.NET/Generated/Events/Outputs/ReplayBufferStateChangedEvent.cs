@@ -28,13 +28,13 @@ public class ReplayBufferStateChangedEvent : IObsWsEventData
     /// Whether the output is active
     /// </summary>
     [JsonPropertyName("outputActive")]
-    public bool OutputActive { get; set; }
-    
+    public required bool OutputActive { get; set; }
+
     /// <summary>
     /// The specific state of the output
     /// </summary>
     [JsonPropertyName("outputState")]
-    public string OutputState { get; set; } = string.Empty;
-    
+    public required string OutputState { get; set; }
+
 }
 

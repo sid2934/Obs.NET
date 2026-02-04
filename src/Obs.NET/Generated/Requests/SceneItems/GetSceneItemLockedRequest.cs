@@ -56,6 +56,6 @@ public class GetSceneItemLockedResponse : IObsWsRequestData
     /// Whether the scene item is locked. `true` for locked, `false` for unlocked
     /// </summary>
     [JsonPropertyName("sceneItemLocked")]
-    public bool SceneItemLocked { get; set; }
-    
+    public required bool SceneItemLocked { get; set; }
+
 }

@@ -66,6 +66,6 @@ public class GetSceneItemBlendModeResponse : IObsWsRequestData
     /// Current blend mode
     /// </summary>
     [JsonPropertyName("sceneItemBlendMode")]
-    public string SceneItemBlendMode { get; set; } = string.Empty;
-    
+    public required string SceneItemBlendMode { get; set; }
+
 }

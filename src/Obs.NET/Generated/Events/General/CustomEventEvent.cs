@@ -28,7 +28,7 @@ public class CustomEventEvent : IObsWsEventData
     /// Custom event data
     /// </summary>
     [JsonPropertyName("eventData")]
-    public System.Text.Json.JsonElement EventData { get; set; }
-    
+    public required System.Text.Json.JsonElement EventData { get; set; }
+
 }
 

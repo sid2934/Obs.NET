@@ -268,13 +268,17 @@ public partial class ObsWsClient(ObsWsClientOptions? options = null) : IAsyncDis
 
     private async Task<ObsWsOpMessage<HelloContainer>> WaitForHelloMessageAsync(CancellationToken cancellationToken)
     {
+        if (_helloMessageTcs is null)
+            throw new InvalidOperationException("Hello message task completion source was not initialized");
+
         using var timeoutCts = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken);
         timeoutCts.CancelAfter(TimeSpan.FromSeconds(10)); // 10 second timeout for Hello message
 
+        var tcs = _helloMessageTcs;
         try
         {
-            cancellationToken.Register(() => _helloMessageTcs.TrySetCanceled(cancellationToken));
-            return await _helloMessageTcs.Task.ConfigureAwait(false);
+            cancellationToken.Register(() => tcs.TrySetCanceled(cancellationToken));
+            return await tcs.Task.ConfigureAwait(false);
         }
         catch (OperationCanceledException) when (timeoutCts.Token.IsCancellationRequested &&
                                                  !cancellationToken.IsCancellationRequested)

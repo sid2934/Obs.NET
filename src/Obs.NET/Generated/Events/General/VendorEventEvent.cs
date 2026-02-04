@@ -31,19 +31,19 @@ public class VendorEventEvent : IObsWsEventData
     /// Name of the vendor emitting the event
     /// </summary>
     [JsonPropertyName("vendorName")]
-    public string VendorName { get; set; } = string.Empty;
-    
+    public required string VendorName { get; set; }
+
     /// <summary>
     /// Vendor-provided event typedef
     /// </summary>
     [JsonPropertyName("eventType")]
-    public string SubEventType { get; set; } = string.Empty;
-    
+    public required string SubEventType { get; set; }
+
     /// <summary>
     /// Vendor-provided event data. {} if event does not provide any data
     /// </summary>
     [JsonPropertyName("eventData")]
-    public System.Text.Json.JsonElement EventData { get; set; }
-    
+    public required System.Text.Json.JsonElement EventData { get; set; }
+
 }
 

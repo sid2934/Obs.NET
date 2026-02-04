@@ -28,13 +28,13 @@ public class CurrentPreviewSceneChangedEvent : IObsWsEventData
     /// Name of the scene that was switched to
     /// </summary>
     [JsonPropertyName("sceneName")]
-    public string SceneName { get; set; } = string.Empty;
-    
+    public required string SceneName { get; set; }
+
     /// <summary>
     /// UUID of the scene that was switched to
     /// </summary>
     [JsonPropertyName("sceneUuid")]
-    public string SceneUuid { get; set; } = string.Empty;
-    
+    public required string SceneUuid { get; set; }
+
 }
 

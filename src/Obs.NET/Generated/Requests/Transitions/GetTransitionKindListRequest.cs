@@ -35,6 +35,6 @@ public class GetTransitionKindListResponse : IObsWsRequestData
     /// Array of transition kinds
     /// </summary>
     [JsonPropertyName("transitionKinds")]
-    public IEnumerable<string> TransitionKinds { get; set; }
-    
+    public required IEnumerable<string> TransitionKinds { get; set; }
+
 }

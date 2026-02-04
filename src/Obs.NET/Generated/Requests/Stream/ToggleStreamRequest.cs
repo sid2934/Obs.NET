@@ -33,6 +33,6 @@ public class ToggleStreamResponse : IObsWsRequestData
     /// New state of the stream output
     /// </summary>
     [JsonPropertyName("outputActive")]
-    public bool OutputActive { get; set; }
-    
+    public required bool OutputActive { get; set; }
+
 }

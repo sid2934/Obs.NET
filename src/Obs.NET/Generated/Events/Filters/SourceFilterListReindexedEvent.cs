@@ -28,13 +28,13 @@ public class SourceFilterListReindexedEvent : IObsWsEventData
     /// Name of the source
     /// </summary>
     [JsonPropertyName("sourceName")]
-    public string SourceName { get; set; } = string.Empty;
-    
+    public required string SourceName { get; set; }
+
     /// <summary>
     /// Array of filter objects
     /// </summary>
     [JsonPropertyName("filters")]
-    public IEnumerable<Obs.NET.Models.ObsFilter> Filters { get; set; }
-    
+    public required IEnumerable<Obs.NET.Models.ObsFilter> Filters { get; set; }
+
 }
 

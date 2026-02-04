@@ -28,19 +28,19 @@ public class SceneItemListReindexedEvent : IObsWsEventData
     /// Name of the scene
     /// </summary>
     [JsonPropertyName("sceneName")]
-    public string SceneName { get; set; } = string.Empty;
-    
+    public required string SceneName { get; set; }
+
     /// <summary>
     /// UUID of the scene
     /// </summary>
     [JsonPropertyName("sceneUuid")]
-    public string SceneUuid { get; set; } = string.Empty;
-    
+    public required string SceneUuid { get; set; }
+
     /// <summary>
     /// Array of scene item objects
     /// </summary>
     [JsonPropertyName("sceneItems")]
-    public IEnumerable<Obs.NET.Models.ObsSceneItem> SceneItems { get; set; }
-    
+    public required IEnumerable<Obs.NET.Models.ObsSceneItem> SceneItems { get; set; }
+
 }
 

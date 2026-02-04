@@ -52,6 +52,6 @@ public class GetGroupSceneItemListResponse : IObsWsRequestData
     /// Array of scene items in the group
     /// </summary>
     [JsonPropertyName("sceneItems")]
-    public IEnumerable<Obs.NET.Models.ObsSceneItem> SceneItems { get; set; }
-    
+    public required IEnumerable<Obs.NET.Models.ObsSceneItem> SceneItems { get; set; }
+
 }

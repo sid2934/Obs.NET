@@ -50,12 +50,12 @@ public class GetSourceActiveResponse : IObsWsRequestData
     /// Whether the source is showing in Program
     /// </summary>
     [JsonPropertyName("videoActive")]
-    public bool VideoActive { get; set; }
-    
+    public required bool VideoActive { get; set; }
+
     /// <summary>
     /// Whether the source is showing in the UI (Preview, Projector, Properties)
     /// </summary>
     [JsonPropertyName("videoShowing")]
-    public bool VideoShowing { get; set; }
-    
+    public required bool VideoShowing { get; set; }
+
 }

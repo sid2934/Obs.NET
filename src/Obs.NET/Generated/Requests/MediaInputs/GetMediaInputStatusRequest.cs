@@ -59,18 +59,18 @@ public class GetMediaInputStatusResponse : IObsWsRequestData
     /// State of the media input
     /// </summary>
     [JsonPropertyName("mediaState")]
-    public string MediaState { get; set; } = string.Empty;
-    
+    public required string MediaState { get; set; }
+
     /// <summary>
     /// Total duration of the playing media in milliseconds. `null` if not playing
     /// </summary>
     [JsonPropertyName("mediaDuration")]
-    public double MediaDuration { get; set; }
-    
+    public required double MediaDuration { get; set; }
+
     /// <summary>
     /// Position of the cursor in milliseconds. `null` if not playing
     /// </summary>
     [JsonPropertyName("mediaCursor")]
-    public double MediaCursor { get; set; }
-    
+    public required double MediaCursor { get; set; }
+
 }

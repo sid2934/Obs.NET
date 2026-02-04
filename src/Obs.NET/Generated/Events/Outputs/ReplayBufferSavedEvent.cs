@@ -28,7 +28,7 @@ public class ReplayBufferSavedEvent : IObsWsEventData
     /// Path of the saved replay file
     /// </summary>
     [JsonPropertyName("savedReplayPath")]
-    public string SavedReplayPath { get; set; } = string.Empty;
-    
+    public required string SavedReplayPath { get; set; }
+
 }
 

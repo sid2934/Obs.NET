@@ -28,7 +28,7 @@ public class CurrentProfileChangingEvent : IObsWsEventData
     /// Name of the current profile
     /// </summary>
     [JsonPropertyName("profileName")]
-    public string ProfileName { get; set; } = string.Empty;
-    
+    public required string ProfileName { get; set; }
+
 }
 
