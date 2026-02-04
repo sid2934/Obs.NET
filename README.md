@@ -3,6 +3,8 @@
 A full-featured OBS Studio WebSocket v5 client library for .NET.
 
 [![NuGet](https://img.shields.io/nuget/v/Obs.NET.svg)](https://www.nuget.org/packages/Obs.NET)
+[![GitHub](https://img.shields.io/github/stars/sid2934/Obs.NET?style=social)](https://github.com/sid2934/Obs.NET)
+[![CI](https://github.com/sid2934/Obs.NET/actions/workflows/ci.yml/badge.svg)](https://github.com/sid2934/Obs.NET/actions/workflows/ci.yml)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 
 ## Features
@@ -221,4 +223,3 @@ See [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md) for attribution of third-pa
 
 - [OBS Project](https://obsproject.com/) for OBS Studio
 - [obs-websocket](https://github.com/obsproject/obs-websocket) for the WebSocket API
-- Originally extracted from [Cs2VideoGenerator](https://github.com/heyvito/Cs2VideoGenerator)
