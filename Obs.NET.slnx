@@ -1,0 +1,18 @@
+<Solution>
+
+  <Folder Name="/Solution Files/">
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+    <File Path="nuget.config" />
+    <File Path="README.md" />
+    <File Path="version.json" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/Obs.NET.Example/Obs.NET.Example.csproj" />
+    <Project Path="src/Obs.NET.WebSocket.Generator/Obs.NET.WebSocket.Generator.csproj" />
+    <Project Path="src/Obs.NET/Obs.NET.csproj" />
+  </Folder>
+  <Folder Name="/test/">
+    <Project Path="test/Obs.NET.Tests/Obs.NET.Tests.csproj" />
+  </Folder>
+</Solution>
