@@ -234,4 +234,84 @@ public class ObsRequestExceptionTests
         // Assert
         await Assert.That(exception.Message).IsEqualTo(errorMessage);
     }
+
+    /// <summary>
+    /// Tests that the status constructor exposes the obs-websocket RequestStatus code and comment.
+    ///
+    /// When an OBS request fails, the RequestStatus code and comment are the machine-readable
+    /// details that applications can inspect to react to specific failures without string-matching
+    /// the formatted message.
+    /// </summary>
+    [Test]
+    public async Task Constructor_WithStatus_SetsCodeAndComment()
+    {
+        // Arrange
+        const string errorMessage = "OBS request 'GetSceneList' failed with code 604: Scene not found";
+        const int code = 604;
+        const string comment = "Scene not found";
+
+        // Act
+        var exception = new ObsRequestException(errorMessage, code, comment);
+
+        // Assert
+        await Assert.That(exception.Message).IsEqualTo(errorMessage);
+        await Assert.That(exception.Code).IsEqualTo(code);
+        await Assert.That(exception.Comment).IsEqualTo(comment);
+    }
+
+    /// <summary>
+    /// Tests that the status constructor accepts a null comment.
+    ///
+    /// obs-websocket does not always provide a comment for a failed request, so the exception
+    /// must preserve a null comment while still exposing the status code.
+    /// </summary>
+    [Test]
+    public async Task Constructor_WithStatusAndNullComment_SetsCodeAndNullComment()
+    {
+        // Arrange
+        const string errorMessage = "OBS request 'SomeRequest' failed with code 500: No details provided";
+        const int code = 500;
+
+        // Act
+        var exception = new ObsRequestException(errorMessage, code, null);
+
+        // Assert
+        await Assert.That(exception.Message).IsEqualTo(errorMessage);
+        await Assert.That(exception.Code).IsEqualTo(code);
+        await Assert.That(exception.Comment).IsNull();
+    }
+
+    /// <summary>
+    /// Tests that the message-only constructor leaves Code and Comment null.
+    ///
+    /// The message-only constructor is used for failures that do not carry an obs-websocket
+    /// RequestStatus (e.g., deserialization failures), so Code and Comment must remain null.
+    /// </summary>
+    [Test]
+    public async Task Constructor_WithMessage_LeavesCodeAndCommentNull()
+    {
+        // Act
+        var exception = new ObsRequestException("Failed to deserialize response data");
+
+        // Assert
+        await Assert.That(exception.Code).IsNull();
+        await Assert.That(exception.Comment).IsNull();
+    }
+
+    /// <summary>
+    /// Tests that the message-and-inner-exception constructor leaves Code and Comment null.
+    ///
+    /// This constructor wraps an underlying exception rather than an obs-websocket status,
+    /// so Code and Comment must remain null.
+    /// </summary>
+    [Test]
+    public async Task Constructor_WithMessageAndInnerException_LeavesCodeAndCommentNull()
+    {
+        // Act
+        var exception = new ObsRequestException("Request failed", new InvalidOperationException("inner"));
+
+        // Assert
+        await Assert.That(exception.Code).IsNull();
+        await Assert.That(exception.Comment).IsNull();
+    }
 }
