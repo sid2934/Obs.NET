@@ -224,7 +224,9 @@ public partial class ObsWsClient(ObsWsClientOptions? options = null) : IAsyncDis
             if (!status.Result)
             {
                 throw new ObsRequestException(
-                    $"OBS request '{fullResponseObject.D.RequestType}' failed with code {status.Code}: {status.Comment ?? "No details provided"}");
+                    $"OBS request '{fullResponseObject.D.RequestType}' failed with code {status.Code}: {status.Comment ?? "No details provided"}",
+                    status.Code,
+                    status.Comment);
             }
 
             return fullResponseObject.D.ResponseData;
